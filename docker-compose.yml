@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  x86-64.nl:
+    image: lscr.io/linuxserver/grav:latest
+    container_name: x86-64.nl
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: Europe/Amsterdam
+      VIRTUAL_HOST: x86-64.nl
+      VIRTUAL_PORT: 8000
+    volumes:
+      - ./config:/config
+    ports:
+      - 8000:80
+    restart: unless-stopped
