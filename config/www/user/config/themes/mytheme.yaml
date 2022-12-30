@@ -1,0 +1,37 @@
+streams:
+  schemes:
+    theme:
+      type: ReadOnlyStream
+      prefixes:
+        '': [user/themes/mytheme, user/themes/chalk]
+enabled: true
+blog_theme: dark
+dropdown:
+  enabled: true
+scrollappear_enabled: true
+summary_enabled: '0'
+header_font: lato
+body_width: null
+footer_text: '2023 Mischa Rodermond'
+social_twitter: null
+social_facebook: null
+social_medium: null
+social_github: mrpapercut
+social_gitlab: null
+social_bitbucket: null
+social_stackoverflow: null
+social_keybase: null
+social_docker: null
+social_linkedin: null
+social_dribbble: null
+social_spotify: null
+social_youtube: null
+social_twitch: null
+social_steam: null
+social_discord: null
+social_bitcoin: null
+social_ethereum: null
+social_email: null
+social_flickr: null
+social_instagram: null
+social_tumblr: null
