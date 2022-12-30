@@ -1,0 +1,55 @@
+::selection {
+    background-color: #0461D0;
+    color: #fff;
+}
+
+a.header-logo {
+    position: relative;
+}
+
+a.header-logo:after {
+    content: 'by Mischa Rodermond';
+    position: absolute;
+    font-size: 0.75rem;
+    left: 0;
+    bottom: -5px;
+    font-weight: normal;
+}
+
+.article-list {
+    margin: 0 0 50px 0;
+}
+
+.oeis-details {}
+
+.oeis-label {
+    display: block;
+    font-weight: 600;
+}
+
+#pwgen {}
+
+#pwgen label {
+    display: block;
+}
+
+#pwgen label .pwgen-label {
+    width: 40%;
+    display: inline-block;
+}
+
+#pwgen button {
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    font-family: 'Lato';
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #fff;
+    margin-top: 2rem;
+}
+
+#pwgen pre {
+    border: 1px solid #fff;
+    padding: 0.5rem;
+    text-align: center;
+}

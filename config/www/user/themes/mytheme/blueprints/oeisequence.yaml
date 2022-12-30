@@ -1,0 +1,66 @@
+extends@: default
+child_type: item
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.child_type:
+                  default: item
+        oeisequence:
+          type: tab
+          title: OEIS Sequence Config
+
+          fields:
+            content_title:
+              type: spacer
+              title: Content Definition
+
+            header.sequence.sequence_id:
+              type: text
+              label: Sequence ID
+              validate:
+                required: true
+                type: text
+
+            header.sequence.description:
+              type: text
+              label: Description
+              validate:
+                required: false
+                type: text
+
+            header.sequence.known_values:
+              type: text
+              label: Known Values
+              validate:
+                required: true
+                type: text
+
+            header.sequence.new_values:
+              type: text
+              label: New Values
+              validate:
+                required: false
+                type: text
+
+            header.sequence.range_checked:
+              type: text
+              label: Range Checked
+              validate:
+                required: true
+                type: text
+
+            header.sequence.date:
+              type: date
+              label: Date
+              validate:
+                required: true
+                type: text

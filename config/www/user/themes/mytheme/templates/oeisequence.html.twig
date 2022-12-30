@@ -1,0 +1,57 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    {% include 'partials/navigation.html.twig' %}
+    <article class="article {% if theme_config.scrollappear_enabled %}scrollappear{% endif %}">
+        <header class="article-header">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.header.headline }}</p>
+            <div class="article-list-footer">
+                <span class="article-list-date">
+                    {{ page.date|date('d-m-Y') }}
+                </span>
+
+                {% if page.taxonomy.tag %}
+                <span class="article-list-divider">-</span>
+                <div class="article-list-tags">
+                    {% for tag in page.taxonomy.tag %}
+                    <a href="{{base_url}}/tag:{{tag}}">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </header>
+
+        <div class="oeis-details">
+            <div class="oeis-name">
+                <span class="oeis-label">Sequence ID:</span>
+                <span class="oeis-value"><a href="https://oeis.org/{{ page.header.sequence.sequence_id }}" target="_blank">{{ page.header.sequence.sequence_id }}</a></span>
+            </div>
+            <div class="oeis-description">
+                <span class="oeis-label">Description:</span>
+                <span class="oeis-value">{{ page.header.sequence.description }}</span>
+            </div>
+            <div class="oeis-known-values">
+                <span class="oeis-label">Previously known values:</span>
+                <span class="oeis-value">{{ page.header.sequence.known_values }}</span>
+            </div>
+            <div class="oeis-new-values">
+                <span class="oeis-label">New values:</span>
+                <span class="oeis-value">{{ page.header.sequence.new_values }}</span>
+            </div>
+            <div class="oeis-range-checked">
+                <span class="oeis-label">Range checked</span>
+                <span class="oeis-value">{{ page.header.sequence.range_checked }}</span>
+            </div>
+            <div class="oeis-date">
+                <span class="oeis-label">Date</span>
+                <span class="oeis-value">{{ page.header.sequence.date }}</span>
+            </div>
+        </div>
+
+        <div class="article-content">
+        {{ content | raw }}
+        </div>
+    </article>
+    {% include 'partials/footer.html.twig' %}
+{% endblock %}
