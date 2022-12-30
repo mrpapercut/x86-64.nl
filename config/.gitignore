@@ -1,0 +1,12 @@
+# Folders
+keys/*
+log/nginx/*
+log/php/*
+
+# Files
+.migrations
+log/logrotate.status
+nginx/*.pem
+
+# .gitkeep
+!.gitkeep

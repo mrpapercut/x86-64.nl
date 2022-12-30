@@ -20,7 +20,7 @@ user/data/*
 user/accounts/*
 !user/accounts/.*
 
-# local cofig and security
+# local config and security
 user/localhost/config/security.yaml
 user/config/security.yaml
 user/config/site.yaml
@@ -35,15 +35,7 @@ tests/_support/_generated/*
 tests/cache/*
 tests/error.log
 
-# OS Generated
-.DS_Store*
-ehthumbs.db
-Icon?
-Thumbs.db
-*.swp
-
 ### Node ###
-
 npm-debug.log
 
 # Runtime data
