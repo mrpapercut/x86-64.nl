@@ -103,7 +103,7 @@ class DrawCanvas {
     }
 
     clear() {
-        this.ctx.fillStyle = 'rgba(35, 35, 35, 0.3)'; // Using opacity causes fading effect
+        this.ctx.fillStyle = 'rgba(21, 21, 21, 0.3)'; // Using opacity causes fading effect
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
         this.lines = this.lines.filter(l => l.alive)
