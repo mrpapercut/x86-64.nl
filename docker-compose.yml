@@ -1,5 +1,9 @@
 version: '3.9'
 
+networks:
+  x86-64.nl:
+    external: true
+
 services:
   x86-64.nl:
     image: lscr.io/linuxserver/grav:latest
@@ -15,3 +19,5 @@ services:
     ports:
       - 8000:80
     restart: unless-stopped
+    networks:
+      - x86-64.nl

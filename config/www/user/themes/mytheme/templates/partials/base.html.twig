@@ -11,7 +11,8 @@
     {% include 'partials/metadata.html.twig' %}
 
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
-    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    {# <link rel="canonical" href="{{ page.url(true, true) }}" /> #}
+    <link rel="canonical" href="https://x86-64.nl/" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     {% block stylesheets %}
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Lato" rel="stylesheet">
@@ -27,6 +28,7 @@
 {% endblock head%}
 </head>
 <body {% if page.header.body_classes %}class="{{ page.header.body_classes }}" {% endif %}>
+  <canvas id="bgcanvas"></canvas>
   <main>
 	<div class="grid grid-centered"{% if theme_config.body_width%}style="max-width: {{ theme_config.body_width }};" {% endif %}>
       <div class="grid-cell">
