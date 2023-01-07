@@ -24,7 +24,7 @@
         {% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css', 98) %}
     {% do assets.addCss('theme://css/custom.css', 98) %}
     {{ assets.css() | raw }}
-    {% endblock %}
+    {% endblock stylesheets %}
 {% endblock head%}
 </head>
 <body {% if page.header.body_classes %}class="{{ page.header.body_classes }}" {% endif %}>
@@ -39,29 +39,18 @@
   </main>
 
 {% block javascripts %}
-{% if theme_config.ga_analytics %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ site.ga_analytics }}');
-  </script>
-
-{% endif %}
-
-   {% do assets.addJs('jquery', 108) %}
-   {% do assets.addJs('//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js', 107) %}
-    {% do assets.addJs('theme://js/vendor.js', 103) %}
-    {% do assets.addJs('theme://js/webfont.js', 102) %}
-     {% if theme_config.scrollappear_enabled %}
+  {% do assets.addJs('jquery', 108) %}
+  {% do assets.addJs('//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js', 107) %}
+  {% do assets.addJs('theme://js/vendor.js', 103) %}
+  {% do assets.addJs('theme://js/webfont.js', 102) %}
+  {% if theme_config.scrollappear_enabled %}
     {% do assets.addJs('theme://js/scrollappear.js', 103) %}
-    {% endif %}
+  {% endif %}
   {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js', 102) %}
-    {% do assets.addJs('theme://js/application.js', 100) %}
+  {% do assets.addJs('theme://js/application.js', 100) %}
+  {% do assets.addJs('theme://js/bgcanvas.js', 100) %}
 
 {% endblock %}
 {{ assets.js() | raw }}
-
 </body>
 </html>
