@@ -71,7 +71,7 @@ class DrawCanvas {
         this.startingLives = 3;
 
         this.lines = [];
-        this.maxnumlines = 20;
+        this.maxnumlines = 24;
 
         this.mousePos = {x: 0, y: 0}
     }
