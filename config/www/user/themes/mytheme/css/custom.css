@@ -3,6 +3,17 @@
     color: #fff;
 }
 
+#bgcanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.grid {
+    background: radial-gradient(black, transparent)
+}
+
 a.header-logo {
     position: relative;
 }
