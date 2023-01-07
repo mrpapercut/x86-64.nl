@@ -58,8 +58,10 @@ class Line {
 class DrawCanvas {
     constructor(canvasElement) {
         this.canvas = canvasElement;
-        this.canvas.width = 800;
-        this.canvas.height = 600;
+
+        this.canvas.width = parseInt(window.getComputedStyle(document.body).width, 10);
+        this.canvas.height = parseInt(window.getComputedStyle(document.body).height, 10);
+
         this.ctx = this.canvas.getContext('2d');
 
         // Config
@@ -84,7 +86,7 @@ class DrawCanvas {
             this.addLine(this.mousePos);
         });
 
-        this.canvas.addEventListener('mousemove', e => {
+        document.body.addEventListener('mousemove', e => {
             this.mousePos.x = e.clientX;
             this.mousePos.y = e.clientY;
 
