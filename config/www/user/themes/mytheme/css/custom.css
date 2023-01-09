@@ -12,7 +12,7 @@
 }
 
 .grid {
-    background: radial-gradient(black, transparent)
+    background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0.5) 75%, transparent 100%)
 }
 
 a.header-logo {
