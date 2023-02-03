@@ -23,6 +23,10 @@
     margin-bottom: .5rem;
 }
 
+.grid-cell {
+    min-height: 100vh;
+}
+
 a.header-logo {
     position: relative;
 }
