@@ -15,6 +15,14 @@
     background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0.5) 75%, transparent 100%)
 }
 
+.grid-centered {
+    min-width: 850px;
+}
+
+.grid-centered p {
+    margin-bottom: .5rem;
+}
+
 a.header-logo {
     position: relative;
 }
